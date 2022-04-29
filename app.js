@@ -9,16 +9,14 @@ const d = new Date();
 let day = weekday[d.getDay()];
 let mon = month[d.getMonth()];
 
-let date_ob = new Date();
-
 let dayy = 'Friday';
 let monthh = 'April';
 let hour = 14;
 let minute = 12;
 let sec = 3;
-let hours = date_ob.getHours();
-let minutes = date_ob.getMinutes();
-let seconds = date_ob.getSeconds();
+let hours = d.getHours();
+let minutes = d.getMinutes();
+let seconds = d.getSeconds();
 
 cron.schedule("*/5 * * * * *", function() {
     if(dayy != day || monthh != mon || hour != hours || minutes != minute || seconds != sec){
